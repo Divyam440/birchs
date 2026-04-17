@@ -1,4 +1,5 @@
 import { Kalam } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const kalam = Kalam({
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         className={`${kalam.className} antialiased bg-black select-none`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
